@@ -38,14 +38,15 @@ This project solves the **Identity Reconciliation** problem for Bitespeed's back
 ├── routes/
 │ └── identifyRoute.js
 ├── utils/
-│ └── db.js \# PostgreSQL connection logic
-├── app.js \# Main entry point
+│ └── db.js # PostgreSQL connection logic
+├── app.js # Main entry point
 ├── package.json
 └── README.md
 
 ````
 
 ---
+
 
 ## 🔧 Setup & Installation
 
