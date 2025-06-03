@@ -5,12 +5,15 @@ import identifyRoute from "./routes/identify.js";
 const app = express();
 const PORT = 3000;
 
+import cors from "cors";
+app.use(cors());
+
 // Middleware
 app.use(express.json());
 
 // Routes
 app.get("/", (req, res) => {
-  res.send("Hello from ES Modules!");
+  res.send("This is the Bitespeed Identity Reconciliation API");
 });
 
 app.use("/identify", identifyRoute);
@@ -22,5 +25,5 @@ app.post("/api/data", (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on ${PORT}`);
 });
