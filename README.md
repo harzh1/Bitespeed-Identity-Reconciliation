@@ -43,8 +43,6 @@ This project solves the **Identity Reconciliation** problem for Bitespeed's back
 └── README.md
 ```
 
-````
-
 ---
 
 ## 🚀 Setup & Installation
@@ -152,4 +150,3 @@ CREATE TABLE contacts (
 ## 📜 License
 
 This project is for learning and evaluation purposes only.
-````
