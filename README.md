@@ -1,90 +1,91 @@
-Here's the updated `README.md` with your requested `.env` format and a few minor enhancements for clarity and consistency:
+Absolutely! Here's a polished, visually improved version of your README with better formatting, consistent icons, enhanced spacing, and some emphasis for clarity and aesthetics:
 
-```markdown
+````markdown
 # 🧠 Bitespeed Identity Reconciliation
 
 This project solves the **Identity Reconciliation** problem for Bitespeed's backend task. It ensures that multiple contacts with shared identifiers (email or phone number) are logically linked under a unified identity.
 
-🔗 **Live Demo:** 👉 [https://bitespeed-identity-reconciliation-u6k9.onrender.com](https://bitespeed-identity-reconciliation-u6k9.onrender.com)
+🔗 **Live Demo:** [bitespeed-identity-reconciliation-u6k9.onrender.com](https://bitespeed-identity-reconciliation-u6k9.onrender.com)
 
 ---
 
-## 📌 Features
+## ✨ Features
 
-- Accepts contact input via `email` and/or `phoneNumber`.
-- Identifies whether the contact exists.
-- Creates new or links to existing contact(s) intelligently.
+- Accepts contact input via **email** and/or **phoneNumber**.
+- Detects whether the contact already exists.
+- Creates new contacts or links to existing ones intelligently.
 - Distinguishes between **primary** and **secondary** contacts.
 - Returns a clean, merged view of all related contacts.
 
 ---
 
-## 🚀 Tech Stack
+## 🛠 Tech Stack
 
-- **Backend:** Node.js (ES Modules)
-- **Database:** PostgreSQL (hosted on Render)
-- **Deployment:** Render Web Service
-- **Package Manager:** npm
-- **Environment Variables:** `.env` file
+| Layer           | Technology                 |
+| --------------- | -------------------------- |
+| Backend         | Node.js (ES Modules)       |
+| Database        | PostgreSQL (Render-hosted) |
+| Deployment      | Render Web Service         |
+| Package Manager | npm                        |
+| Environment     | `.env` file                |
 
 ---
 
-## 📂 Project Structure
-```
+## 📁 Project Structure
 
+```plaintext
 .
 ├── controllers/
-│ └── identifyController.js
+│   └── identifyController.js
 ├── routes/
-│ └── identifyRoute.js
+│   └── identifyRoute.js
 ├── utils/
-│ └── db.js # PostgreSQL connection logic
-├── app.js # Main entry point
+│   └── db.js               # PostgreSQL connection logic
+├── app.js                  # Main entry point
 ├── package.json
 └── README.md
-
+```
 ````
 
 ---
 
+## 🚀 Setup & Installation
 
-## 🔧 Setup & Installation
+### 1. Clone the repository
 
-1.  **Clone the repository**
+```bash
+git clone https://github.com/your-username/Bitespeed-Identity-Reconciliation.git
+cd Bitespeed-Identity-Reconciliation
+```
 
-    ```bash
-    git clone [https://github.com/your-username/Bitespeed-Identity-Reconciliation.git](https://github.com/your-username/Bitespeed-Identity-Reconciliation.git)
-    cd Bitespeed-Identity-Reconciliation
-    ```
+### 2. Install dependencies
 
-2.  **Install dependencies**
+```bash
+npm install
+```
 
-    ```bash
-    npm install
-    ```
+### 3. Configure environment variables
 
-3.  **Create a `.env` file**
+Create a `.env` file at the root and add:
 
-    Add your PostgreSQL connection string and desired port:
+```env
+DATABASE_URL=postgresql://<db_name>:<password>@<host_name>:5432/<db_name>
+PORT=3000
+```
 
-    ```env
-    DATABASE_URL=postgresql://db_name:pass@host_name:5432/db_name
-    PORT=3000
-    ```
+### 4. Run the server
 
-4.  **Run the server**
+```bash
+node app.js
+```
 
-    ```bash
-    node app.js
-    ```
-
-    The server runs at `http://localhost:3000`.
+Access the server at: [http://localhost:3000](http://localhost:3000)
 
 ---
 
-### 📨 API Endpoint
+## 📨 API Endpoint
 
-**`POST /identify`**
+### `POST /identify`
 
 **Request Body Raw**
 
@@ -93,9 +94,9 @@ This project solves the **Identity Reconciliation** problem for Bitespeed's back
   "email": "user@example.com",
   "phoneNumber": "9999999999"
 }
-````
+```
 
-_At least one of `email` or `phoneNumber` is required._
+> At least one of `email` or `phoneNumber` is required.
 
 **Response**
 
@@ -112,7 +113,7 @@ _At least one of `email` or `phoneNumber` is required._
 
 ---
 
-### 🗃️ Database Schema
+## 🗃️ Database Schema
 
 ```sql
 CREATE TABLE contacts (
@@ -129,29 +130,27 @@ CREATE TABLE contacts (
 
 ---
 
-## 🚀 Deployment on Render
+## ☁️ Deployment on Render
 
-1.  Push your code to a GitHub repo.
-2.  Go to [Render](https://render.com/) and create a **Web Service**:
-    - **Environment:** Node
-    - **Build Command:** `npm install`
-    - **Start Command:** `node app.js`
-3.  Add environment variables: For `DATABASE_URL` and `PORT`, use the values from your `.env` file. Render will automatically expose these to your application.
-4.  If not already linked, create a PostgreSQL instance in Render and connect it to your web service. Ensure your `DATABASE_URL` in Render matches the connection string provided by your Render PostgreSQL instance.
-5.  Done\! Your service will auto-deploy on every push.
+1. Push your code to a GitHub repository.
+2. On [Render](https://render.com/), create a **Web Service** with the following settings:
+
+   - **Environment:** Node
+   - **Build Command:** `npm install`
+   - **Start Command:** `node app.js`
+
+3. Add environment variables `DATABASE_URL` and `PORT` in Render's dashboard (matching your `.env`).
+4. Create and link a PostgreSQL instance in Render if you haven't already. Make sure `DATABASE_URL` matches the Render PostgreSQL connection string.
+5. Your service will auto-deploy on every push.
 
 ---
 
 ## 🙋‍♂️ Author
 
-[Harsh](https://www.google.com/search?q=https://github.com/your-username) (replace `your-username` with your actual GitHub username)
+[Harsh](https://github.com/harzh1)
 
 ---
 
-## 🛠 License
+## 📜 License
 
 This project is for learning and evaluation purposes only.
-
-```
-
-```
