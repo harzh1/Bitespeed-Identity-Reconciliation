@@ -1,6 +1,3 @@
-Absolutely! Here's a polished, visually improved version of your README with better formatting, consistent icons, enhanced spacing, and some emphasis for clarity and aesthetics:
-
-````markdown
 # 🧠 Bitespeed Identity Reconciliation
 
 This project solves the **Identity Reconciliation** problem for Bitespeed's backend task. It ensures that multiple contacts with shared identifiers (email or phone number) are logically linked under a unified identity.
@@ -45,6 +42,7 @@ This project solves the **Identity Reconciliation** problem for Bitespeed's back
 ├── package.json
 └── README.md
 ```
+
 ````
 
 ---
@@ -154,3 +152,4 @@ CREATE TABLE contacts (
 ## 📜 License
 
 This project is for learning and evaluation purposes only.
+````
